@@ -36,6 +36,9 @@ app.use(express.static('public'))
   models.MovieQuote.findByIdAndUpdate(moviequote_id, req.body, function(error, moviequote) {
     if(!error) {
       res.json(moviequote);
+    } else {
+      console.error(error);
+      res.send(error);
     }
   });
 })
