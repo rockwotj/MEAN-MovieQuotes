@@ -12,11 +12,14 @@
       movieQuoteInModal.quote = this.quoteValue;
       movieQuoteInModal.movie = this.movieValue;
       movieQuoteInModal.last_touch = new Date();
-      //TODO
       if(this.isNewQuote) {
         MovieQuotes.save(movieQuoteInModal);
       } else {
-        MovieQuotes.update({id: movieQuoteInModal._id}, movieQuoteInModal);
+        var updatedMovieQuote = {};
+        updatedMovieQuote.quote = movieQuoteInModal.quote;
+        updatedMovieQuote.movie = movieQuoteInModal.movie;
+        updatedMovieQuote.last_touch = movieQuoteInModal.last_touch;
+        MovieQuotes.update({id: movieQuoteInModal._id}, updatedMovieQuote);
       }
       $modalInstance.close(movieQuoteInModal);
     };

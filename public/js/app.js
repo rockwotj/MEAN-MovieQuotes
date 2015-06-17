@@ -53,7 +53,6 @@
     };
 
     this.listMovieQuotes = function() {
-      //TODO
       this.items = MovieQuotes.query();
     };
 

@@ -37,7 +37,6 @@ app.use(express.static('public'))
     if(!error) {
       res.json(moviequote);
     } else {
-      console.error(error);
       res.send(error);
     }
   });
