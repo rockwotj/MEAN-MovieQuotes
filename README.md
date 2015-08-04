@@ -4,9 +4,9 @@ This is an example of the Moviequotes webapp implemented in a MEAN stack.
 ### What is MEAN?
 MEAN is an acronym for the technologies used to build this:
 
-Mongo DB
-Express.js
-AngularJs
+Mongo DB <br>
+Express.js <br>
+AngularJs <br>
 NodeJS
 
 ### Structure
