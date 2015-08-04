@@ -2,9 +2,13 @@
 var models = require('./models.js');
 var express = require('express');
 var bodyParser = require('body-parser');
+
 var app = express();
+// Middleware for JSON encoded post & put requests
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// Start app routes
 app.use(express.static('public'))
 .get('/', function(req,res) {
   res.sendFile('public/index.html');
